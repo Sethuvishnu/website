@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="my-app\src\App.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Document</title>
+    
+</head>
+
+<body>
+    
+    
+    
+    
+
+<div class="box" id="box">
+    <div id="circle"></div>
+</div>
+    <div class="container">
+        
+        <div class="main">
+            
+            <button class="home-button" id="toggleButton">Home</button>
+            
+            <div class="logo" ><img  src="image\logo.png",alt="hello"></div>
+           
+        </div>
+        <div class="contact"></div>
+    </div>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+
+    <script>
+      const toggleButton = document.getElementById('toggleButton');
+      const box = document.getElementById('box');
+      const circle = document.getElementById('circle');
+    
+      function displayBox() {
+        // Display the box slowly with transition
+        box.style.display = "block";
+        setTimeout(() => {
+          box.style.opacity = "0.4";
+          // Show the circle with animation
+          setTimeout(() => {
+            circle.style.opacity = "1";
+            circle.style.width = "50vh";
+            circle.style.height = "50vh";
+            circle.style.borderRadius = "0";
+          }, 100); // Adjust timing as necessary
+        }, 10); // Delay to ensure the transition effect is applied
+       
+        toggleButton.removeEventListener("click", displayBox);
+      }
+    
+      // Add click event listener to the button
+      toggleButton.addEventListener("click", displayBox);
+    
+      // Add click event listener to the box
+      box.addEventListener("click", function() {
+        // Hide the box slowly with transition
+        circle.style.width = "0";
+        circle.style.height = "0";
+        circle.style.borderRadius = "50%";
+        circle.style.opacity = "0";
+        setTimeout(() => {
+          box.style.opacity = "0";
+          setTimeout(() => {
+            box.style.display = "none";
+            circle.style.width = "25vh";
+            circle.style.height = "25vhpx";
+            circle.style.borderRadius = "50%";
+          }, 500); // Ensure transition completes before hiding
+        }, 500); // Ensure transition completes before hiding
+        // Re-add the event listener to the button after hiding the box
+        toggleButton.addEventListener("click", displayBox);
+      });
+    </script>
+</body>
+</html>

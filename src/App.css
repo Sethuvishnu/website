@@ -1,0 +1,184 @@
+.body{
+  min-height: 100vh; /* Set minimum body height to viewport height */
+  margin: 0;
+  z-index: -1;
+  overflow-x: hidden;
+  overflow: overlay;
+  
+  
+  
+  
+}
+:root {
+  --color-bg: #fff; /* White background */
+  --color-bg-hover: #fef2e4; /* Hover background */
+  --color-contrast: #FFD700; /* Yellow contrast */
+  --color-slight-contrast: #f9e5e9;
+  --color-dark: #000;
+  --color-text: #b00e2f;
+  --color-placeholder: #b00e2f;
+  --color-light: #fff; /* White text or light color */
+  --color-overlay: hsl(31, 86%, 69%);
+  --color-line: #e8e8e8;
+  --header-transition: 0.5s;
+  --button-stroke-size: 3rem;
+  --button-stroke-bg: var(--color-bg);
+  --button-stroke-stroke: var(--color-contrast);
+  --button-stroke-stroke-hover: var(--button-stroke-stroke);
+  --button-stroke-plane: var(--button-stroke-stroke);
+  --button-stroke-clip: var(--button-stroke-stroke);
+  --button-stroke-text: var(--button-stroke-stroke);
+  --button-stroke-text-hover: var(--color-light);
+  --button-circle-color: var(--color-contrast);
+  --button-circle-bg: var(--color-bg);
+  --button-circle-text: var(--color-light);
+  --button-goto-inside-size: 10.875rem;
+  --button-goto-color: var(--color-contrast);
+  --button-goto-hover-color: var(--color-light);
+}
+
+
+
+
+.home-button {
+  top: 2vh;
+  right: 5vh;
+  position: fixed;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #050303; 
+  font-size: 20px;
+  ;
+  filter: drop-shadow(3px 3px 0px #ffd500fe);
+  border: 0.5px solid #ffd500fe;
+  height: 6vh;
+  width: 16vh;
+  transition: filter 0.4s ease,transform 0.3s ease 0.1s;
+  cursor: pointer; 
+}
+
+
+
+
+.home-button:hover {
+  filter: drop-shadow(0 0 0 #ffd500fe); /* Change drop shadow on hover */
+  transform:  translate(2px, 2px);
+}
+@keyframes slideBlue {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.home-button:hover {
+  background-image: linear-gradient(to bottom, transparent 50%, #FFD700 50%);
+  background-size: 100% 200%;
+  animation: slideBlue 0.5s ease forwards; /* Apply animation on hover */
+}
+
+
+/* Hover effect */
+
+
+
+.container{
+height: 190vh;
+
+
+background-color: #ffd500fe;
+position: absolute;
+top: 0; 
+left: 0; 
+width: 100%; 
+
+}
+.contact{
+ 
+  
+  
+  
+  
+ 
+  
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  transform-style: preserve-3d;
+  z-index: -1;
+  
+   
+}
+
+.main{
+  
+  background-color:hsl(0, 0%, 100%);
+ 
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  border-radius:0 0 65px 65px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: -1;
+  
+  
+  justify-content: center;
+  align-items: center;
+ 
+  
+ 
+
+}
+
+.logo img{
+  height: 8vh;
+  width: 8vh;
+  padding: 10px 20px;
+  
+  
+}
+.logo{
+  position: fixed;
+  top: 0;
+  left: 1vh;
+  height: 5vh;
+  width: 10vh;
+  
+}
+
+
+.box {
+  position:fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+  display: None; 
+  
+  opacity: 0.4;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+  opacity: 0;   }
+
+  
+  
+  #circle {
+    width: 10vh;
+    height: 100vh;
+    border-radius: 10px;
+    background-color: rgb(31, 94, 107);
+    position: absolute;
+    top: 0;
+    right: 0;
+   
+    transition: width 0.8s ease, height 0.8s ease, border-radius 1s ease, opacity 0.5s ease;
+
+    opacity: 1; 
+  }
+
+  
+ 
